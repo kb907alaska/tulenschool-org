@@ -27,30 +27,141 @@ import { MobileNav } from './MobileNav';
         </div>
       </a>
 
-      <!-- Desktop Navigation -->
+      <!-- Desktop Navigation & Mega Menu -->
       <nav class="hidden lg:flex items-center gap-7 text-sm font-bold text-slate-700">
         <a href="/" class="hover:text-sky-600 transition-colors py-1">Home</a>
         <a href="/about" class="hover:text-sky-600 transition-colors py-1">About</a>
         <a href="/enrollment" class="hover:text-sky-600 transition-colors py-1">Enrollment</a>
         <a href="/staff" class="hover:text-sky-600 transition-colors py-1">Staff</a>
-        <a href="/academic-policy-committee" class="hover:text-sky-600 transition-colors py-1">APC Board</a>
-        <a href="/parent-portal" class="hover:text-sky-600 transition-colors py-1">Parent Portal</a>
         
-        <!-- Dropdown for More -->
+        <!-- Desktop Mega Menu Dropdown -->
         <div class="relative group py-1">
-          <button class="flex items-center gap-1 hover:text-sky-600 transition-colors">
-            <span>Explore</span>
-            <svg class="w-4 h-4 text-slate-400 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          <button class="flex items-center gap-1.5 hover:text-sky-600 transition-colors py-1">
+            <span>Explore Campus</span>
+            <svg class="w-4 h-4 text-sky-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           
-          <div class="absolute right-0 top-full hidden group-hover:block w-56 bg-white rounded-2xl shadow-xl border border-sky-100 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-            <a href="/calendar" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-sky-50 hover:text-sky-700 font-semibold">School Calendar</a>
-            <a href="/events" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-sky-50 hover:text-sky-700 font-semibold">Events & Activities</a>
-            <a href="/newsletter" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-sky-50 hover:text-sky-700 font-semibold">Newsletters</a>
-            <a href="/school-profile" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-sky-50 hover:text-sky-700 font-semibold">School Profile & Data</a>
-            <a href="/contact" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-sky-50 hover:text-sky-700 font-semibold">Contact Campus</a>
+          <!-- Mega Menu Panel -->
+          <div class="absolute -right-32 top-full hidden group-hover:block w-[780px] bg-white rounded-3xl shadow-2xl border border-sky-100 p-8 z-50 animate-in fade-in slide-in-from-top-3 duration-200">
+            <div class="grid grid-cols-3 gap-8">
+              
+              <!-- Mega Col 1: Academics & Governance -->
+              <div class="space-y-4">
+                <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                  <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+                  <span class="text-xs font-extrabold uppercase tracking-widest text-sky-700">Governance & Leadership</span>
+                </div>
+                <ul class="space-y-2.5 text-xs font-medium">
+                  <li>
+                    <a href="/about" class="group/item flex items-start gap-2.5 p-2 rounded-xl hover:bg-sky-50 transition-colors">
+                      <span class="text-sky-600 font-bold group-hover/item:translate-x-0.5 transition-transform">&rsaquo;</span>
+                      <div>
+                        <strong class="text-sky-950 block text-xs group-hover/item:text-sky-600">About Tułen Charter</strong>
+                        <span class="text-[11px] text-slate-500">Mission, vision & tribal partnership</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/academic-policy-committee" class="group/item flex items-start gap-2.5 p-2 rounded-xl hover:bg-sky-50 transition-colors">
+                      <span class="text-sky-600 font-bold group-hover/item:translate-x-0.5 transition-transform">&rsaquo;</span>
+                      <div>
+                        <strong class="text-sky-950 block text-xs group-hover/item:text-sky-600">APC Board Governance</strong>
+                        <span class="text-[11px] text-slate-500">Board members, agendas & bylaws</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/staff" class="group/item flex items-start gap-2.5 p-2 rounded-xl hover:bg-sky-50 transition-colors">
+                      <span class="text-sky-600 font-bold group-hover/item:translate-x-0.5 transition-transform">&rsaquo;</span>
+                      <div>
+                        <strong class="text-sky-950 block text-xs group-hover/item:text-sky-600">Faculty & Staff Directory</strong>
+                        <span class="text-[11px] text-slate-500">Meet certified KPBSD educators</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/school-profile" class="group/item flex items-start gap-2.5 p-2 rounded-xl hover:bg-sky-50 transition-colors">
+                      <span class="text-sky-600 font-bold group-hover/item:translate-x-0.5 transition-transform">&rsaquo;</span>
+                      <div>
+                        <strong class="text-sky-950 block text-xs group-hover/item:text-sky-600">School Profile & Data</strong>
+                        <span class="text-[11px] text-slate-500">State accountability & AK STAR metrics</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Mega Col 2: Student & Family Life -->
+              <div class="space-y-4">
+                <div class="flex items-center gap-2 border-b border-sky-100 pb-2">
+                  <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                  <span class="text-xs font-extrabold uppercase tracking-widest text-amber-700">Family & Student Life</span>
+                </div>
+                <ul class="space-y-2.5 text-xs font-medium">
+                  <li>
+                    <a href="/enrollment" class="group/item flex items-start gap-2.5 p-2 rounded-xl hover:bg-amber-50 transition-colors">
+                      <span class="text-amber-600 font-bold group-hover/item:translate-x-0.5 transition-transform">&rsaquo;</span>
+                      <div>
+                        <strong class="text-sky-950 block text-xs group-hover/item:text-amber-700">K-4 Admissions & Lottery</strong>
+                        <span class="text-[11px] text-slate-500">Online Intent to Enroll application</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/parent-portal" class="group/item flex items-start gap-2.5 p-2 rounded-xl hover:bg-amber-50 transition-colors">
+                      <span class="text-amber-600 font-bold group-hover/item:translate-x-0.5 transition-transform">&rsaquo;</span>
+                      <div>
+                        <strong class="text-sky-950 block text-xs group-hover/item:text-amber-700">Parent Portal & Resources</strong>
+                        <span class="text-[11px] text-slate-500">PowerSchool, bus routes & menus</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/calendar" class="group/item flex items-start gap-2.5 p-2 rounded-xl hover:bg-amber-50 transition-colors">
+                      <span class="text-amber-600 font-bold group-hover/item:translate-x-0.5 transition-transform">&rsaquo;</span>
+                      <div>
+                        <strong class="text-sky-950 block text-xs group-hover/item:text-amber-700">School Calendar</strong>
+                        <span class="text-[11px] text-slate-500">Academic & cultural events filter</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/events" class="group/item flex items-start gap-2.5 p-2 rounded-xl hover:bg-amber-50 transition-colors">
+                      <span class="text-amber-600 font-bold group-hover/item:translate-x-0.5 transition-transform">&rsaquo;</span>
+                      <div>
+                        <strong class="text-sky-950 block text-xs group-hover/item:text-amber-700">Events & Celebrations</strong>
+                        <span class="text-[11px] text-slate-500">Subsistence Harvest Week & NYO</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Mega Col 3: Dena'ina Heritage & Contact -->
+              <div class="space-y-4 bg-sky-950 text-white p-5 rounded-2xl border border-sky-800">
+                <div class="flex items-center justify-between border-b border-sky-800 pb-2">
+                  <span class="text-[10px] font-extrabold uppercase tracking-widest text-sky-400">Culture Spotlight</span>
+                  <span class="text-[10px] font-mono text-sky-300">Qunshi</span>
+                </div>
+                <div>
+                  <h4 class="font-serif font-bold text-sky-300 text-base">Outer Inlet Dena'ina</h4>
+                  <p class="text-[11px] text-slate-200 mt-1 leading-relaxed">
+                    Celebrating traditional language, Elders circles, and subsistence ecology along Kahtnu waters.
+                  </p>
+                </div>
+                <div class="pt-2 border-t border-sky-900 space-y-2 text-xs">
+                  <a href="/newsletter" class="block font-bold text-sky-400 hover:text-white transition-colors">
+                    📖 Monthly Newsletters &rarr;
+                  </a>
+                  <a href="/contact" class="block font-bold text-amber-300 hover:text-white transition-colors">
+                    📍 Contact Campus & Map &rarr;
+                  </a>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </nav>
@@ -73,7 +184,7 @@ import { MobileNav } from './MobileNav';
           (907) 335-2829
         </a>
         
-        <!-- Mobile Navigation Drawer Trigger -->
+        <!-- Full-Screen Mobile Navigation Trigger -->
         <MobileNav client:load />
       </div>
 

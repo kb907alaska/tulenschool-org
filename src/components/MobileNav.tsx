@@ -1,82 +1,126 @@
-import React, { useState } from 'react';
-import { Menu, X, Phone, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Menu, X, Phone, ChevronRight, Home, Info, GraduationCap, Users, ShieldCheck, BookOpen, Calendar, Sparkles, Newspaper, FileText, Mail } from 'lucide-react';
 
 export const MobileNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About Tułen', href: '/about' },
-    { name: 'Enrollment & Lottery', href: '/enrollment' },
-    { name: 'Staff & Teachers', href: '/staff' },
-    { name: 'Academic Policy Committee', href: '/academic-policy-committee' },
-    { name: 'Parent Portal', href: '/parent-portal' },
-    { name: 'School Calendar', href: '/calendar' },
-    { name: 'Events', href: '/events' },
-    { name: 'Newsletters', href: '/newsletter' },
-    { name: 'School Profile', href: '/school-profile' },
-    { name: 'Contact Us', href: '/contact' }
+  // Prevent background scroll when full-screen menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  const mainLinks = [
+    { name: 'Home', href: '/', icon: Home, badge: 'Main' },
+    { name: 'About Tułen', href: '/about', icon: Info, badge: 'Kenaitze' },
+    { name: 'Enrollment & Lottery', href: '/enrollment', icon: GraduationCap, badge: 'K-4 Free' },
+    { name: 'Staff Directory', href: '/staff', icon: Users, badge: 'KPBSD' },
+    { name: 'APC Governance Board', href: '/academic-policy-committee', icon: ShieldCheck, badge: 'Board' },
+    { name: 'Parent Portal & Resources', href: '/parent-portal', icon: BookOpen, badge: 'Family' },
+    { name: 'Academic & Culture Calendar', href: '/calendar', icon: Calendar, badge: 'Events' },
+    { name: 'Campus Events', href: '/events', icon: Sparkles, badge: 'Harvest' },
+    { name: 'Monthly Newsletters', href: '/newsletter', icon: Newspaper, badge: 'Flow' },
+    { name: 'School Profile & Data', href: '/school-profile', icon: FileText, badge: 'AK STAR' },
+    { name: 'Contact Campus', href: '/contact', icon: Mail, badge: 'Kenai' }
   ];
 
   return (
     <div className="lg:hidden">
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="p-2 rounded-xl text-sky-900 hover:bg-sky-50 focus:outline-none transition-colors"
-        aria-label="Toggle Navigation Menu"
+        onClick={() => setIsOpen(true)}
+        className="p-2.5 rounded-xl bg-sky-50 text-sky-900 border border-sky-200 hover:bg-sky-100 focus:outline-none transition-colors"
+        aria-label="Open Navigation Menu"
       >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        <Menu className="w-6 h-6" />
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 top-[100px] z-50 bg-slate-950/60 backdrop-blur-sm flex flex-col justify-start">
-          <div className="bg-white border-b border-sky-100 shadow-2xl p-6 overflow-y-auto max-h-[calc(100vh-110px)] rounded-b-3xl">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
-              <div className="flex items-center gap-3">
-                <img src="/images/tulen-logo.png" alt="Logo" className="w-10 h-10 object-contain" />
-                <div>
-                  <span className="text-[10px] uppercase font-extrabold tracking-widest text-sky-600">Qunshi Beluga</span>
-                  <h3 className="font-serif font-bold text-sky-950 text-base">Tułen Charter School</h3>
-                </div>
+        <div className="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-xl flex flex-col justify-between animate-in fade-in duration-200">
+          
+          {/* Top Bar */}
+          <div className="px-6 py-4 border-b border-slate-800/80 flex items-center justify-between bg-slate-900/90 shrink-0">
+            <div className="flex items-center gap-3">
+              <img
+                src="/images/tulen-logo.png"
+                alt="Tułen Qunshi Logo"
+                className="w-12 h-12 object-contain drop-shadow-md"
+              />
+              <div>
+                <span className="text-[10px] uppercase font-extrabold tracking-widest text-sky-400 block">
+                  Qunshi Beluga &bull; Public K-4
+                </span>
+                <h3 className="font-serif font-extrabold text-white text-lg leading-tight">
+                  Tułen Charter School
+                </h3>
               </div>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-slate-400 hover:text-slate-800 p-1"
-              >
-                <X className="w-5 h-5" />
-              </button>
             </div>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="p-2.5 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-sky-600 transition-all border border-slate-700"
+              aria-label="Close Navigation Menu"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
 
-            <nav className="space-y-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between px-4 py-3 rounded-xl text-slate-800 font-bold hover:bg-sky-500 hover:text-white transition-all group"
-                >
-                  <span>{link.name}</span>
-                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-white" />
-                </a>
-              ))}
-            </nav>
-
-            <div className="mt-6 pt-6 border-t border-slate-100 space-y-3">
-              <a
-                href="/enrollment"
-                onClick={() => setIsOpen(false)}
-                className="block text-center w-full py-3.5 bg-sky-500 hover:bg-sky-600 text-white font-extrabold rounded-xl shadow-md transition-colors text-sm"
-              >
-                Enroll Now (K-4)
-              </a>
-              <a
-                href="tel:9073352829"
-                className="flex items-center justify-center gap-2 w-full py-3 bg-sky-950 text-white font-bold rounded-xl text-sm hover:bg-slate-900 transition-colors"
-              >
-                <Phone className="w-4 h-4 text-sky-400" /> (907) 335-2829
-              </a>
+          {/* Nav Links Scroll Area */}
+          <div className="flex-grow overflow-y-auto px-6 py-6 space-y-2">
+            <div className="pb-2">
+              <span className="text-[11px] font-extrabold uppercase tracking-widest text-sky-400 block mb-3 px-2">
+                Navigation & Campus Hub
+              </span>
+              <div className="space-y-1.5">
+                {mainLinks.map((link) => {
+                  const Icon = link.icon;
+                  return (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center justify-between p-3.5 rounded-2xl bg-slate-900/60 hover:bg-sky-600 border border-slate-800 hover:border-sky-400 text-white font-bold transition-all group"
+                    >
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-9 h-9 rounded-xl bg-sky-950 group-hover:bg-white/20 text-sky-400 group-hover:text-white flex items-center justify-center shrink-0">
+                          <Icon className="w-5 h-5" />
+                        </div>
+                        <span className="text-sm font-semibold">{link.name}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-md bg-slate-800 text-sky-300 group-hover:bg-white group-hover:text-sky-950">
+                          {link.badge}
+                        </span>
+                        <ChevronRight className="w-4 h-4 text-slate-500 group-hover:text-white" />
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
+
+          {/* Sticky Bottom Actions */}
+          <div className="p-6 bg-slate-900 border-t border-slate-800/80 space-y-3 shrink-0">
+            <a
+              href="/enrollment"
+              onClick={() => setIsOpen(false)}
+              className="block text-center w-full py-3.5 bg-sky-500 hover:bg-sky-600 text-white font-extrabold rounded-2xl shadow-lg transition-all text-sm uppercase tracking-wider"
+            >
+              Enroll Now for 2026-2027 (K-4)
+            </a>
+            <a
+              href="tel:9073352829"
+              className="flex items-center justify-center gap-2 w-full py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-2xl text-sm transition-colors border border-slate-700"
+            >
+              <Phone className="w-4 h-4 text-sky-400" /> Call Main Office: (907) 335-2829
+            </a>
+          </div>
+
         </div>
       )}
     </div>
