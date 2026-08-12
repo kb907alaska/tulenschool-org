@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DenainaWordWidget from '../components/DenainaWordWidget.astro';
+---
+
+<Layout
+  title="About Tułen Charter School | Public K-4 Charter in Kenai, AK"
+  description="Learn about Tułen Charter School's mission, governance partnership with Kenaitze Indian Tribe and KPBSD, campus history, and Dena'ina cultural framework."
+>
+  
+  <!-- PAGE HEADER -->
+  <section class="bg-teal-950 text-white py-16 sm:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <img src="/images/hero-river.png" alt="Kenai River background" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider">
+        Nuch'uhq'u (Our Heritage & Story)
+      </div>
+      <h1 class="font-serif font-extrabold text-4xl sm:text-5xl text-white tracking-tight">
+        About Tułen Charter School
+      </h1>
+      <p class="text-slate-200 text-base sm:text-lg max-w-3xl font-normal leading-relaxed">
+        A groundbreaking public charter school in Kenai, Alaska where traditional Dena'ina culture, environmental stewardship, and academic excellence come together.
+      </p>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION SECTION -->
+  <section class="py-16 sm:py-24 bg-sand border-b border-sand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-amber-700">Mission & Purpose</span>
+          <h2 class="font-serif font-bold text-3xl sm:text-4xl text-teal-950 leading-snug">
+            Guiding Young Learners Along the Stream of Knowledge
+          </h2>
+
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            Officially approved by the Alaska State Board of Education in March 2025 and launched in August 2025, <strong class="text-teal-950">Tułen Charter School</strong> provides a rigorous K-4 elementary education rooted in the Dena'ina Athabascan language, culture, and values of the Kenai Peninsula.
+          </p>
+
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            The word <span class="font-bold text-amber-800">Tułen</span> is Outer Inlet Dena'ina meaning <em>"the river will flow"</em> or <em>"the current is flowing."</em> Just as the salmon river sustains life across Alaska, Tułen Charter School nurtures curiosity, resilience, literacy, and community stewardship in every child.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
+              <h4 class="font-serif font-bold text-teal-900 text-base mb-1">Our Mission</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                To foster academic excellence, cultural identity, self-confidence, and environmental stewardship for all K-4 students through place-based learning.
+              </p>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
+              <h4 class="font-serif font-bold text-teal-900 text-base mb-1">Our Vision</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                A vibrant educational community where Dena'ina heritage inspires lifelong curiosity, respect for land, and strong elementary academic mastery.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+            <img src="/images/culture-classroom.png" alt="Students in Dena'ina Cultural Class" class="w-full h-[400px] object-cover" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIBAL & DISTRICT PARTNERSHIP -->
+  <section class="py-16 sm:py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-amber-700">Governance & Collaboration</span>
+        <h2 class="font-serif font-bold text-3xl sm:text-4xl text-teal-950">
+          A Landmark Partnership
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600">
+          Tułen Charter School is created through a collaborative agreement between the Kenai Peninsula Borough School District and the Kenaitze Indian Tribe.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="bg-sand p-8 rounded-3xl border border-sand-border space-y-4">
+          <div class="w-12 h-12 bg-teal-900 text-amber-400 rounded-2xl flex items-center justify-center font-bold text-xl">
+            KPBSD
+          </div>
+          <h3 class="font-serif font-bold text-2xl text-teal-950">Kenai Peninsula Borough School District</h3>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            As an official public charter school within KPBSD, Tułen adheres to Alaska State Academic Standards, offering certified teachers, state literacy assessments, special education support, and tuition-free public enrollment.
+          </p>
+          <ul class="space-y-2 text-xs text-slate-600 font-medium">
+            <li class="flex items-center gap-2">&check; Alaska State Accredited K-4 Standards</li>
+            <li class="flex items-center gap-2">&check; Certified KPBSD Elementary Teachers</li>
+            <li class="flex items-center gap-2">&check; District Special Education & Speech Support</li>
+          </ul>
+        </div>
+
+        <div class="bg-sand p-8 rounded-3xl border border-sand-border space-y-4">
+          <div class="w-12 h-12 bg-amber-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl">
+            KIT
+          </div>
+          <h3 class="font-serif font-bold text-2xl text-teal-950">Kenaitze Indian Tribe Partnership</h3>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            Hosted at the Tribe’s modern Kahtnuht’ana Duhdeldiht campus, the Kenaitze Indian Tribe provides cultural educators, Elders-in-Residence, subsistence gear, traditional language instruction, and wraparound family support.
+          </p>
+          <ul class="space-y-2 text-xs text-slate-600 font-medium">
+            <li class="flex items-center gap-2">&check; Outer Inlet Dena'ina Language Instruction</li>
+            <li class="flex items-center gap-2">&check; Elders Storytelling & Cultural Circles</li>
+            <li class="flex items-center gap-2">&check; Kahtnuht’ana Campus Facilities & Land Access</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DENA'INA CULTURAL VALUES -->
+  <section class="py-16 sm:py-24 bg-teal-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Yaghali Dena'ina Gu</span>
+        <h2 class="font-serif font-bold text-3xl sm:text-4xl text-white">
+          Our Guiding Dena'ina Core Values
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300">
+          These traditional values form the moral and behavioral framework of our school community every day.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-teal-900/60 p-8 rounded-3xl border border-teal-800 space-y-3">
+          <span class="text-xs font-extrabold uppercase text-amber-400">Value 01</span>
+          <h3 class="font-serif font-bold text-2xl text-white">Ch'anq'u (Respect)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Respect for self, teachers, classmates, Elders, and the living environment. Practicing kindness and listening with an open heart.
+          </p>
+        </div>
+
+        <div class="bg-teal-900/60 p-8 rounded-3xl border border-teal-800 space-y-3">
+          <span class="text-xs font-extrabold uppercase text-amber-400">Value 02</span>
+          <h3 class="font-serif font-bold text-2xl text-white">K’echan (Stewardship)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Caring for the river, wildlife, land, and community resources. Leaving things cleaner and better for future generations.
+          </p>
+        </div>
+
+        <div class="bg-teal-900/60 p-8 rounded-3xl border border-teal-800 space-y-3">
+          <span class="text-xs font-extrabold uppercase text-amber-400">Value 03</span>
+          <h3 class="font-serif font-bold text-2xl text-white">Naghełt’ana (Unity)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Working together as one family. Honoring diverse backgrounds, helping fellow students, and celebrating shared progress.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>

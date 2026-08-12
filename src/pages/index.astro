@@ -1,0 +1,349 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DenainaWordWidget from '../components/DenainaWordWidget.astro';
+import { staffMembers } from '../data/staffData';
+import { schoolEvents } from '../data/eventsData';
+
+const principal = staffMembers.find(s => s.id === 'kimberly-daniels');
+const featuredEvents = schoolEvents.slice(0, 3);
+---
+
+<Layout title="Tułen Charter School | Public K-4 Dena'ina Culture & Academic Charter in Kenai, AK">
+  
+  <!-- HERO SECTION -->
+  <section class="relative bg-teal-950 text-white overflow-hidden py-16 sm:py-24 lg:py-32">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/hero-river.png"
+        alt="Kenai River Wilderness near Tułen Charter School"
+        class="w-full h-full object-cover opacity-35"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-teal-950 via-teal-950/90 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-teal-950 via-transparent to-teal-950/50"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <span>Yaghali! Welcome to Tułen</span>
+          </div>
+
+          <h1 class="font-serif font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-none">
+            Where Academic Rigor Meets <span class="text-amber-400">Dena'ina Heritage</span>.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-200 font-normal leading-relaxed max-w-2xl">
+            Tułen Charter School is a public K-4 charter school in Kenai, Alaska. Operated through an innovative partnership between the <strong class="text-amber-300 font-semibold">Kenaitze Indian Tribe</strong> and the <strong class="text-amber-300 font-semibold">KPBSD</strong>, we empower students through place-based literacy, STEM, and outdoor subsistence culture.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a
+              href="/enrollment"
+              class="px-7 py-3.5 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5"
+            >
+              Enroll Your Student (K-4)
+            </a>
+            <a
+              href="/about"
+              class="px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 backdrop-blur-sm transition-all"
+            >
+              Discover Our Story &rarr;
+            </a>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="pt-6 grid grid-cols-3 gap-4 border-t border-teal-800/80">
+            <div>
+              <span class="block font-serif font-extrabold text-2xl text-amber-400">K &ndash; 4</span>
+              <span class="text-xs text-slate-300 font-medium">Grade Levels</span>
+            </div>
+            <div>
+              <span class="block font-serif font-extrabold text-2xl text-amber-400">100%</span>
+              <span class="text-xs text-slate-300 font-medium">Public & Tuition-Free</span>
+            </div>
+            <div>
+              <span class="block font-serif font-extrabold text-2xl text-amber-400">Kenai</span>
+              <span class="text-xs text-slate-300 font-medium">Peninsula Borough</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <DenainaWordWidget />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUR PILLARS SECTION -->
+  <section class="py-16 sm:py-24 bg-sand border-b border-sand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-amber-700">Foundational Excellence</span>
+        <h2 class="font-serif font-bold text-3xl sm:text-4xl text-teal-950">
+          The Four Pillars of Tułen Charter School
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600">
+          Our curriculum weaves Alaska State Academic Standards with centuries of Dena'ina wisdom, environmental stewardship, and community identity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Pillar 1 -->
+        <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-slate-200 transition-all card-hover group">
+          <div class="w-12 h-12 rounded-2xl bg-teal-900 text-amber-400 flex items-center justify-center font-bold text-xl mb-6 shadow-md group-hover:bg-amber-600 group-hover:text-white transition-colors">
+            01
+          </div>
+          <h3 class="font-serif font-bold text-xl text-teal-950 mb-2">Dena'ina Language & Heritage</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Daily language immersion, oral storytelling, and cultural traditions taught in partnership with Tribal Elders and certified linguists.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-slate-200 transition-all card-hover group">
+          <div class="w-12 h-12 rounded-2xl bg-teal-900 text-amber-400 flex items-center justify-center font-bold text-xl mb-6 shadow-md group-hover:bg-amber-600 group-hover:text-white transition-colors">
+            02
+          </div>
+          <h3 class="font-serif font-bold text-xl text-teal-950 mb-2">Subsistence & Ecology</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Hands-on outdoor science including salmon lifecycle monitoring, plant foraging, river stewardship, and annual Subsistence Harvest Week.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-slate-200 transition-all card-hover group">
+          <div class="w-12 h-12 rounded-2xl bg-teal-900 text-amber-400 flex items-center justify-center font-bold text-xl mb-6 shadow-md group-hover:bg-amber-600 group-hover:text-white transition-colors">
+            03
+          </div>
+          <h3 class="font-serif font-bold text-xl text-teal-950 mb-2">Rigorous Literacy & STEAM</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Structured reading interventions, project-based mathematics, and technology integration designed for foundational early elementary mastery.
+          </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-slate-200 transition-all card-hover group">
+          <div class="w-12 h-12 rounded-2xl bg-teal-900 text-amber-400 flex items-center justify-center font-bold text-xl mb-6 shadow-md group-hover:bg-amber-600 group-hover:text-white transition-colors">
+            04
+          </div>
+          <h3 class="font-serif font-bold text-xl text-teal-950 mb-2">Tribal & Family Partnership</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Governed by an active Academic Policy Committee (APC), welcoming parent involvement, community potlucks, and Elders-in-Residence.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPAL & CAMPUS SPOTLIGHT -->
+  <section class="py-16 sm:py-24 bg-teal-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-amber-500/30">
+            <img
+              src="/images/kimberly-daniels.jpg"
+              alt="Principal Kimberly Daniels"
+              class="w-full h-[420px] object-cover"
+            />
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-teal-950 via-teal-950/80 to-transparent p-6">
+              <h4 class="font-serif font-bold text-xl text-white">Kimberly Daniels</h4>
+              <p class="text-xs text-amber-300 font-semibold">Principal / Head of School</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Leadership Message</span>
+          <h2 class="font-serif font-bold text-3xl sm:text-4xl text-white leading-snug">
+            "Welcoming Every Child to a Flowing River of Learning"
+          </h2>
+
+          <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+            At Tułen Charter School, we believe that education flourishes when children feel rooted in their community and connected to the rich heritage of our land. Named after the Dena'ina concept of a flowing river, our school guides students through foundational academics while fostering cultural pride and stewardship.
+          </p>
+
+          <blockquote class="p-4 bg-teal-900/60 rounded-2xl border-l-4 border-amber-500 italic text-xs sm:text-sm text-teal-100">
+            "Our partnership with the Kenaitze Indian Tribe and KPBSD ensures that every student receives a top-tier public education wrapped in warmth, respect, and traditional values."
+          </blockquote>
+
+          <div class="flex items-center gap-4 pt-2">
+            <a
+              href="/staff"
+              class="px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm rounded-xl transition-all"
+            >
+              Meet Our Faculty & Staff
+            </a>
+            <a
+              href="/school-profile"
+              class="px-6 py-3 bg-teal-900 hover:bg-teal-800 text-teal-100 font-semibold text-sm rounded-xl border border-teal-700 transition-all"
+            >
+              View School Profile & Governance
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPUS & CULTURE FEATURED GALLERY -->
+  <section class="py-16 sm:py-24 bg-sand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-amber-700">Kahtnuht’ana Duhdeldiht Campus</span>
+        <h2 class="font-serif font-bold text-3xl sm:text-4xl text-teal-950">
+          Our Classrooms, Land & Culture
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600">
+          Located at 12271 Kenai Spur Highway in Kenai, Alaska, our modern facilities provide purpose-built indoor learning spaces and direct access to outdoor ecosystems.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all group">
+          <div class="h-56 overflow-hidden">
+            <img
+              src="/images/school-exterior.png"
+              alt="Tułen Charter School Exterior Campus"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-teal-700">Kenai Campus</span>
+            <h3 class="font-serif font-bold text-lg text-teal-950 mt-1 mb-2">Modern Educational Facilities</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Equipped with bright elementary classrooms, specialized literacy spaces, multi-purpose halls, and secure playgrounds.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all group">
+          <div class="h-56 overflow-hidden">
+            <img
+              src="/images/culture-classroom.png"
+              alt="Dena'ina Cultural Classroom Learning"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-700">Culture & Arts</span>
+            <h3 class="font-serif font-bold text-lg text-teal-950 mt-1 mb-2">Native Language & Artistry</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Students engage in beadwork, birch bark craftsmanship, song, and Dena'ina language practice alongside Tribal Elders.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all group">
+          <div class="h-56 overflow-hidden">
+            <img
+              src="/images/hero-river.png"
+              alt="Kenai Wilderness Outdoor Learning Environment"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-spruce">Outdoor Science</span>
+            <h3 class="font-serif font-bold text-lg text-teal-950 mt-1 mb-2">River & Forest Ecosystems</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Hands-on exploration of Kenai salmon habitats, forest ecology, weather patterns, and Alaska wildlife tracking.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING EVENTS SPOTLIGHT -->
+  <section class="py-16 sm:py-24 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-amber-700">Mark Your Calendar</span>
+          <h2 class="font-serif font-bold text-3xl sm:text-4xl text-teal-950 mt-1">
+            Upcoming Campus Events
+          </h2>
+        </div>
+        <a
+          href="/calendar"
+          class="px-5 py-2.5 bg-teal-900 hover:bg-teal-800 text-white font-bold text-xs rounded-xl transition-colors self-start md:self-auto"
+        >
+          View Full School Calendar &rarr;
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {featuredEvents.map((event) => {
+          const eventDate = new Date(event.date + 'T00:00:00');
+          const monthStr = eventDate.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+          const dayStr = eventDate.getDate();
+
+          return (
+            <div class="bg-sand p-6 rounded-2xl border border-sand-border shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 bg-teal-900 text-white rounded-xl flex flex-col items-center justify-center font-bold">
+                    <span class="text-[9px] text-amber-400 uppercase tracking-wider">{monthStr}</span>
+                    <span class="text-lg leading-none">{dayStr}</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] font-bold uppercase tracking-wide text-amber-800 bg-amber-100 px-2 py-0.5 rounded-md">
+                      {event.category}
+                    </span>
+                    <h4 class="font-serif font-bold text-teal-950 text-base mt-1 line-clamp-1">
+                      {event.title}
+                    </h4>
+                  </div>
+                </div>
+                <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed mb-4">
+                  {event.description}
+                </p>
+              </div>
+              <div class="text-[11px] text-slate-500 pt-3 border-t border-slate-200/60 font-medium">
+                ⏱ {event.time} &bull; 📍 {event.location}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA ENROLLMENT BANNER -->
+  <section class="py-16 bg-gradient-to-r from-amber-600 to-amber-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="font-serif font-extrabold text-3xl sm:text-4xl text-white">
+        Ready to Join the Tułen Learning Community?
+      </h2>
+      <p class="text-amber-100 max-w-2xl mx-auto text-sm sm:text-base">
+        Tułen Charter School is open to all K-4 elementary students residing in the Kenai Peninsula Borough. Submit your Intent to Enroll today!
+      </p>
+      <div class="flex flex-wrap justify-center items-center gap-4">
+        <a
+          href="/enrollment"
+          class="px-8 py-3.5 bg-teal-950 hover:bg-slate-900 text-white font-bold text-base rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5"
+        >
+          Submit Online Application
+        </a>
+        <a
+          href="/contact"
+          class="px-6 py-3.5 bg-white/20 hover:bg-white/30 text-white font-semibold text-base rounded-xl border border-white/30 backdrop-blur-sm transition-all"
+        >
+          Contact Registrar & Tour
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { staffMembers } from '../data/staffData';
+---
+
+<Layout
+  title="Staff & Leadership Directory | Tułen Charter School"
+  description="Meet the dedicated educators, Dena'ina language specialists, and leadership team at Tułen Charter School in Kenai, AK."
+>
+  
+  <!-- PAGE HEADER -->
+  <section class="bg-teal-950 text-white py-16 sm:py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider">
+        Our Educators & Team
+      </div>
+      <h1 class="font-serif font-extrabold text-4xl sm:text-5xl text-white tracking-tight">
+        Staff & Faculty Directory
+      </h1>
+      <p class="text-slate-200 text-base sm:text-lg max-w-3xl font-normal leading-relaxed">
+        Our passionate team of certified KPBSD teachers, Kenaitze Dena'ina cultural educators, and support specialists are dedicated to inspiring every young learner.
+      </p>
+    </div>
+  </section>
+
+  <!-- STAFF DIRECTORY GRID -->
+  <section class="py-16 sm:py-24 bg-sand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Featured Leadership Spotlight -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-md border border-slate-200 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-4">
+          <img
+            src="/images/kimberly-daniels.jpg"
+            alt="Kimberly Daniels"
+            class="w-full h-80 object-cover rounded-2xl shadow-md border-2 border-amber-500/40"
+          />
+        </div>
+        <div class="lg:col-span-8 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-700">Principal Spotlight</span>
+          <h2 class="font-serif font-bold text-3xl text-teal-950">Kimberly Daniels</h2>
+          <p class="text-xs font-bold uppercase text-teal-800 tracking-wider">Principal / Head of School &bull; M.Ed. Educational Leadership</p>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Kimberly Daniels brings over 20 years of educational leadership and Alaska community partnership experience to Tułen Charter School. Dedicated to cultivating an environment where Dena'ina heritage and rigorous academic standards empower every student.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-4 text-xs font-medium text-slate-600">
+            <a href="mailto:kdaniels@kpbsd.k12.ak.us" class="flex items-center gap-1.5 hover:text-teal-900">
+              ✉️ kdaniels@kpbsd.k12.ak.us
+            </a>
+            <span class="text-slate-300">|</span>
+            <span>📞 (907) 335-2829 x2829</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Staff Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {staffMembers.filter(s => s.id !== 'kimberly-daniels').map((member) => (
+          <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="h-48 overflow-hidden relative">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <span class="absolute top-3 right-3 px-3 py-1 bg-teal-950/80 backdrop-blur-md text-amber-300 text-[10px] font-bold uppercase tracking-wider rounded-full border border-teal-700/50">
+                  {member.department}
+                </span>
+              </div>
+
+              <div class="p-6 space-y-3">
+                <div>
+                  <h3 class="font-serif font-bold text-xl text-teal-950 group-hover:text-teal-700 transition-colors">
+                    {member.name}
+                  </h3>
+                  <p class="text-xs font-bold text-amber-700 mt-0.5">{member.role}</p>
+                  {member.denainaRole && (
+                    <p class="text-[11px] text-teal-800 font-semibold italic mt-0.5">&bull; {member.denainaRole}</p>
+                  )}
+                </div>
+
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  {member.bio}
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+              {member.education && <span class="truncate max-w-[180px]">{member.education}</span>}
+              <a href={`mailto:${member.email}`} class="text-teal-900 hover:text-amber-600 font-bold">
+                Email &rarr;
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

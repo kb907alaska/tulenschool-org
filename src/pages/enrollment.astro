@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { EnrollmentForm } from '../components/EnrollmentForm';
+---
+
+<Layout
+  title="K-4 Enrollment & Lottery | Tułen Charter School"
+  description="Apply for K-4 enrollment at Tułen Charter School in Kenai, AK. Public, tuition-free charter school admission details, timeline, and online Intent to Enroll form."
+>
+  
+  <!-- PAGE HEADER -->
+  <section class="bg-teal-950 text-white py-16 sm:py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider">
+        2026 - 2027 Admissions
+      </div>
+      <h1 class="font-serif font-extrabold text-4xl sm:text-5xl text-white tracking-tight">
+        K-4 Enrollment & Admissions
+      </h1>
+      <p class="text-slate-200 text-base sm:text-lg max-w-3xl font-normal leading-relaxed">
+        Tułen Charter School is a free, public elementary charter school open to all children entering Grades K-4 in the Kenai Peninsula Borough School District.
+      </p>
+    </div>
+  </section>
+
+  <!-- ENROLLMENT OVERVIEW & STEPS -->
+  <section class="py-16 sm:py-24 bg-sand border-b border-sand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: Process Information -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-amber-700">How to Apply</span>
+          <h2 class="font-serif font-bold text-3xl text-teal-950">
+            Admissions Process & Lottery Rules
+          </h2>
+
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            As an Alaska public charter school, Tułen Charter School has no tuition fees. Enrollment is open to any student residing within the Kenai Peninsula Borough.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200 shadow-xs">
+              <div class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center shrink-0">
+                1
+              </div>
+              <div>
+                <h4 class="font-bold text-teal-900 text-sm">Submit Intent to Enroll</h4>
+                <p class="text-xs text-slate-600 mt-1">Complete our online form below or pick up a paper application at our front office.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200 shadow-xs">
+              <div class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center shrink-0">
+                2
+              </div>
+              <div>
+                <h4 class="font-bold text-teal-900 text-sm">Public Lottery Drawing</h4>
+                <p class="text-xs text-slate-600 mt-1">If applications exceed open grade capacity, a public lottery is conducted per KPBSD policy. Sibling preference applies.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200 shadow-xs">
+              <div class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center shrink-0">
+                3
+              </div>
+              <div>
+                <h4 class="font-bold text-teal-900 text-sm">Registration & Verification</h4>
+                <p class="text-xs text-slate-600 mt-1">Accepted families complete KPBSD registration, submit immunization/birth certificate records, and attend orientation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 bg-teal-900 text-white rounded-2xl text-xs space-y-2">
+            <h5 class="font-bold text-amber-300">Age Requirements:</h5>
+            <p><strong>Kindergarten:</strong> Must be 5 years old on or before September 1 of the school year.</p>
+            <p><strong>Grade 1:</strong> Must be 6 years old on or before September 1.</p>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Application Wizard -->
+        <div class="lg:col-span-7">
+          <EnrollmentForm client:load />
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

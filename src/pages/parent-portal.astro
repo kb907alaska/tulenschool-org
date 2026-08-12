@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Parent Portal & Student Resources | Tułen Charter School"
+  description="Quick links for Tułen Charter School families: PowerSchool portal, school supply lists, bus schedules, daily bell schedules, and parent handbooks."
+>
+  
+  <!-- PAGE HEADER -->
+  <section class="bg-teal-950 text-white py-16 sm:py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider">
+        Family Hub & Resources
+      </div>
+      <h1 class="font-serif font-extrabold text-4xl sm:text-5xl text-white tracking-tight">
+        Parent & Student Portal
+      </h1>
+      <p class="text-slate-200 text-base sm:text-lg max-w-3xl font-normal leading-relaxed">
+        Everything Tułen families need for daily school life: PowerSchool grades & attendance, bus routes, school lunch program, handbooks, and supply lists.
+      </p>
+    </div>
+  </section>
+
+  <!-- QUICK ACCESS CARDS -->
+  <section class="py-16 sm:py-24 bg-sand border-b border-sand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <a href="https://kpbsd.org" target="_blank" rel="noopener" class="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs hover:shadow-xl transition-all card-hover group">
+          <div class="w-12 h-12 rounded-2xl bg-teal-900 text-amber-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+            PS
+          </div>
+          <h3 class="font-serif font-bold text-xl text-teal-950 group-hover:text-teal-700">KPBSD PowerSchool</h3>
+          <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+            Check student attendance, quarterly report cards, and district notifications.
+          </p>
+          <span class="inline-block text-xs font-bold text-teal-900 mt-4 group-hover:text-amber-600">Access Portal &#8599;</span>
+        </a>
+
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs hover:shadow-xl transition-all card-hover group">
+          <div class="w-12 h-12 rounded-2xl bg-teal-900 text-amber-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+            📚
+          </div>
+          <h3 class="font-serif font-bold text-xl text-teal-950">Student Handbooks</h3>
+          <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+            Download our 2026-2027 Student & Family Rights & Responsibilities handbook.
+          </p>
+          <a href="/pdfs/tulen-family-handbook-2026.pdf" class="inline-block text-xs font-bold text-teal-900 mt-4 hover:text-amber-600">Download PDF &rarr;</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs hover:shadow-xl transition-all card-hover group">
+          <div class="w-12 h-12 rounded-2xl bg-teal-900 text-amber-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+            🚌
+          </div>
+          <h3 class="font-serif font-bold text-xl text-teal-950">Bus Routes & Transport</h3>
+          <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+            Kenai Peninsula bus route schedules, drop-off rules, and student safety.
+          </p>
+          <a href="/pdfs/tulen-bus-routes-2026.pdf" class="inline-block text-xs font-bold text-teal-900 mt-4 hover:text-amber-600">View Bus Routes &rarr;</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs hover:shadow-xl transition-all card-hover group">
+          <div class="w-12 h-12 rounded-2xl bg-teal-900 text-amber-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+            🍎
+          </div>
+          <h3 class="font-serif font-bold text-xl text-teal-950">Nutrition & Lunches</h3>
+          <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+            Monthly lunch menu, free/reduced meal applications, and healthy snack guidelines.
+          </p>
+          <a href="/pdfs/tulen-lunch-menu-august.pdf" class="inline-block text-xs font-bold text-teal-900 mt-4 hover:text-amber-600">Monthly Menu PDF &rarr;</a>
+        </div>
+
+      </div>
+
+      <!-- DAILY BELL SCHEDULE -->
+      <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-amber-700">Daily Routines</span>
+          <h2 class="font-serif font-bold text-3xl text-teal-950">Daily Bell Schedule</h2>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            Regular school hours are Monday through Friday, 8:15 AM to 2:45 PM. Students may arrive starting at 7:55 AM for morning assembly and breakfast.
+          </p>
+        </div>
+
+        <div class="bg-sand p-6 rounded-2xl border border-sand-border space-y-3 text-xs sm:text-sm">
+          <div class="flex justify-between py-2 border-b border-slate-200 font-medium">
+            <span class="text-slate-600">7:55 AM - 8:15 AM</span>
+            <span class="font-bold text-teal-950">Student Arrival & Morning Breakfast</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-slate-200 font-medium">
+            <span class="text-slate-600">8:15 AM</span>
+            <span class="font-bold text-teal-950">Tł’egh (Morning Circle & Dena'ina Greeting)</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-slate-200 font-medium">
+            <span class="text-slate-600">8:30 AM - 11:30 AM</span>
+            <span class="font-bold text-teal-950">Morning Literacy & STEAM Block</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-slate-200 font-medium">
+            <span class="text-slate-600">11:30 AM - 12:15 PM</span>
+            <span class="font-bold text-teal-950">Lunch & Outdoor Recess</span>
+          </div>
+          <div class="flex justify-between py-2 font-medium">
+            <span class="text-slate-600">2:45 PM</span>
+            <span class="font-bold text-amber-700">Student Dismissal & Bus Loading</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

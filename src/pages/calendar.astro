@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { CalendarFilter } from '../components/CalendarFilter';
+---
+
+<Layout
+  title="School Calendar | Tułen Charter School"
+  description="View the Tułen Charter School academic calendar, cultural events, Subsistence Harvest Week, holidays, and APC meeting dates."
+>
+  
+  <!-- PAGE HEADER -->
+  <section class="bg-teal-950 text-white py-16 sm:py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider">
+        Academic & Cultural Schedule
+      </div>
+      <h1 class="font-serif font-extrabold text-4xl sm:text-5xl text-white tracking-tight">
+        Tułen School Calendar
+      </h1>
+      <p class="text-slate-200 text-base sm:text-lg max-w-3xl font-normal leading-relaxed">
+        Filter upcoming school events, Dena'ina cultural gatherings, APC governance meetings, no-school days, and KPBSD district holidays.
+      </p>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE CALENDAR SECTION -->
+  <section class="py-16 sm:py-24 bg-sand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CalendarFilter client:load />
+    </div>
+  </section>
+
+</Layout>

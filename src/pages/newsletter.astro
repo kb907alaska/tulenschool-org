@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { newsletterArchive } from '../data/newsletterData';
+---
+
+<Layout
+  title="Newsletters & Dena'ina Language Archive | Tułen Charter School"
+  description="Read current and past monthly issues of the Tułen Charter School newsletter, featuring Principal updates, Dena'ina words of the month, and student highlights."
+>
+  
+  <!-- PAGE HEADER -->
+  <section class="bg-teal-950 text-white py-16 sm:py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider">
+        Community Communication
+      </div>
+      <h1 class="font-serif font-extrabold text-4xl sm:text-5xl text-white tracking-tight">
+        Tułen Flow Newsletter Archive
+      </h1>
+      <p class="text-slate-200 text-base sm:text-lg max-w-3xl font-normal leading-relaxed">
+        Stay updated with monthly messages from Principal Kimberly Daniels, classroom highlights, Dena'ina language features, and upcoming dates.
+      </p>
+    </div>
+  </section>
+
+  <!-- NEWSLETTERS LIST -->
+  <section class="py-16 sm:py-24 bg-sand border-b border-sand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {newsletterArchive.map((edition) => (
+          <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 bg-amber-100 text-amber-900 text-xs font-bold rounded-full">
+                  {edition.issueNumber}
+                </span>
+                <span class="text-xs font-bold text-slate-400">{edition.publishDate}</span>
+              </div>
+
+              <h3 class="font-serif font-bold text-xl text-teal-950 group-hover:text-teal-700 transition-colors">
+                {edition.title}
+              </h3>
+
+              <p class="text-xs text-slate-600 leading-relaxed">
+                {edition.summary}
+              </p>
+
+              <!-- Dena'ina Word Feature Box -->
+              <div class="bg-teal-950 text-white p-4 rounded-2xl space-y-1 border border-teal-800">
+                <span class="text-[9px] uppercase font-bold tracking-widest text-amber-400 block">Dena'ina Word of the Issue</span>
+                <p class="font-serif font-bold text-amber-300 text-lg leading-tight">{edition.denainaWord.word} <span class="text-xs font-mono font-normal text-teal-200">[{edition.denainaWord.phonetic}]</span></p>
+                <p class="text-xs font-medium text-slate-200">"{edition.denainaWord.englishMeaning}"</p>
+              </div>
+
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 block mb-2">Issue Highlights:</span>
+                <ul class="space-y-1 text-xs text-slate-700">
+                  {edition.highlights.map(h => (
+                    <li class="flex items-center gap-1.5">&bull; {h}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-100 mt-6">
+              <a
+                href={edition.pdfLink}
+                class="block text-center w-full py-2.5 bg-teal-900 hover:bg-teal-800 text-white text-xs font-bold rounded-xl transition-colors shadow-xs"
+              >
+                Download Full PDF Issue &rarr;
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

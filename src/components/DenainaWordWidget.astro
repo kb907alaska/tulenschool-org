@@ -1,0 +1,50 @@
+---
+interface Props {
+  word?: string;
+  phonetic?: string;
+  english?: string;
+  culturalNote?: string;
+}
+
+const {
+  word = "Tułen",
+  phonetic = "too-LEN",
+  english = "The river will flow / The current is flowing",
+  culturalNote = "Expresses continuous growth, vitality, and connection to the salmon-rich Kahtnu (Kenai River) waters that sustain our community."
+} = Astro.props;
+---
+
+<div class="bg-gradient-to-br from-teal-900 to-slate-900 text-white rounded-3xl p-8 shadow-xl border border-teal-700/30 relative overflow-hidden group">
+  <!-- Subtle Background Pattern -->
+  <div class="absolute -right-8 -bottom-8 w-44 h-44 rounded-full bg-amber-500/10 blur-2xl group-hover:bg-amber-500/20 transition-all duration-500"></div>
+
+  <div class="relative z-10 space-y-4">
+    <div class="flex items-center justify-between">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-500/30">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+        Dena'ina Language Spotlight
+      </span>
+      <span class="text-xs text-teal-300 font-mono">Kenaitze Heritage</span>
+    </div>
+
+    <div>
+      <h3 class="text-4xl sm:text-5xl font-serif font-extrabold text-amber-300 tracking-tight">
+        {word}
+      </h3>
+      <p class="text-sm font-semibold text-teal-200 mt-1 italic">
+        Pronunciation: [{phonetic}]
+      </p>
+    </div>
+
+    <div class="pt-2 border-t border-teal-800">
+      <p class="text-base font-bold text-white mb-1">
+        "{english}"
+      </p>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        {culturalNote}
+      </p>
+    </div>
+  </div>
+</div>
