@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Phone, Calendar, BookOpen, Users, HelpCircle, FileText, ChevronRight } from 'lucide-react';
+import { Menu, X, Phone, ChevronRight } from 'lucide-react';
 
 export const MobileNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,26 +19,29 @@ export const MobileNav: React.FC = () => {
   ];
 
   return (
-    <div class="lg:hidden">
+    <div className="lg:hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 rounded-lg text-teal-900 hover:bg-teal-50 focus:outline-none transition-colors"
+        className="p-2 rounded-xl text-sky-900 hover:bg-sky-50 focus:outline-none transition-colors"
         aria-label="Toggle Navigation Menu"
       >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 top-[110px] z-50 bg-slate-900/50 backdrop-blur-sm flex flex-col justify-start">
-          <div className="bg-sand-bg border-b border-teal-800/10 shadow-2xl p-6 overflow-y-auto max-h-[calc(100vh-120px)] rounded-b-2xl">
-            <div className="flex items-center justify-between border-b border-slate-200 pb-4 mb-4">
-              <div>
-                <span className="text-xs uppercase font-bold tracking-widest text-amber-700">Navigation</span>
-                <h3 className="font-serif font-bold text-teal-900 text-lg">Tułen Charter School</h3>
+        <div className="fixed inset-0 top-[100px] z-50 bg-slate-950/60 backdrop-blur-sm flex flex-col justify-start">
+          <div className="bg-white border-b border-sky-100 shadow-2xl p-6 overflow-y-auto max-h-[calc(100vh-110px)] rounded-b-3xl">
+            <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+              <div className="flex items-center gap-3">
+                <img src="/images/tulen-logo.png" alt="Logo" className="w-10 h-10 object-contain" />
+                <div>
+                  <span className="text-[10px] uppercase font-extrabold tracking-widest text-sky-600">Qunshi Beluga</span>
+                  <h3 className="font-serif font-bold text-sky-950 text-base">Tułen Charter School</h3>
+                </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-slate-500 hover:text-slate-800 p-1"
+                className="text-slate-400 hover:text-slate-800 p-1"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -50,27 +53,27 @@ export const MobileNav: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between px-4 py-3 rounded-lg text-slate-800 font-medium hover:bg-teal-900 hover:text-white transition-all group"
+                  className="flex items-center justify-between px-4 py-3 rounded-xl text-slate-800 font-bold hover:bg-sky-500 hover:text-white transition-all group"
                 >
                   <span>{link.name}</span>
-                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-amber-300" />
+                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-white" />
                 </a>
               ))}
             </nav>
 
-            <div className="mt-6 pt-6 border-t border-slate-200 space-y-3">
+            <div className="mt-6 pt-6 border-t border-slate-100 space-y-3">
               <a
                 href="/enrollment"
                 onClick={() => setIsOpen(false)}
-                className="block text-center w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-xl shadow-md transition-colors"
+                className="block text-center w-full py-3.5 bg-sky-500 hover:bg-sky-600 text-white font-extrabold rounded-xl shadow-md transition-colors text-sm"
               >
                 Enroll Now (K-4)
               </a>
               <a
                 href="tel:9073352829"
-                className="flex items-center justify-center gap-2 w-full py-2.5 bg-teal-900 text-white font-semibold rounded-xl text-sm hover:bg-teal-800 transition-colors"
+                className="flex items-center justify-center gap-2 w-full py-3 bg-sky-950 text-white font-bold rounded-xl text-sm hover:bg-slate-900 transition-colors"
               >
-                <Phone className="w-4 h-4" /> (907) 335-2829
+                <Phone className="w-4 h-4 text-sky-400" /> (907) 335-2829
               </a>
             </div>
           </div>

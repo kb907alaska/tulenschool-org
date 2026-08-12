@@ -2,18 +2,19 @@
 
 @layer base {
   :root {
-    --primary: #0F4C5C;
-    --primary-dark: #0A343F;
-    --primary-light: #1D70A2;
-    --accent: #D97706;
-    --accent-hover: #B45309;
-    --spruce: #2C5E3B;
-    --spruce-light: #3D7A4F;
-    --sand-bg: #FDFBF7;
-    --sand-card: #F7F3EB;
-    --sand-border: #E5DEC9;
-    --text-dark: #1E293B;
-    --text-muted: #64748B;
+    --primary: #0084C7;
+    --primary-dark: #004E7C;
+    --primary-deep: #072A42;
+    --sky-cyan: #00B4D8;
+    --beluga-silver: #8E9DA8;
+    --beluga-light: #EBF3F8;
+    --accent: #E69138;
+    --accent-hover: #C67828;
+    --sand-bg: #F6FAFC;
+    --sand-card: #FFFFFF;
+    --sand-border: #D1E3ED;
+    --text-dark: #0F172A;
+    --text-muted: #475569;
   }
 
   html {
@@ -24,55 +25,63 @@
   }
 }
 
-/* Custom Utilities and Animations */
+/* Custom Utilities and Brand Colors */
 .bg-sand {
-  background-color: #FDFBF7;
+  background-color: #F6FAFC;
 }
 
 .bg-sand-card {
-  background-color: #F8F5EE;
+  background-color: #FFFFFF;
 }
 
 .border-sand {
-  border-color: #E6DFD3;
+  border-color: #D1E3ED;
 }
 
 .text-river-primary {
-  color: #0F4C5C;
+  color: #0084C7;
 }
 
 .bg-river-primary {
-  background-color: #0F4C5C;
+  background-color: #0084C7;
 }
 
 .bg-river-dark {
-  background-color: #0A343F;
+  background-color: #004E7C;
 }
 
-.text-spruce {
-  color: #2C5E3B;
+.bg-river-deep {
+  background-color: #072A42;
 }
 
-.bg-spruce {
-  background-color: #2C5E3B;
+.text-beluga-silver {
+  color: #8E9DA8;
+}
+
+.bg-beluga-silver {
+  background-color: #8E9DA8;
+}
+
+.bg-beluga-light {
+  background-color: #EBF3F8;
 }
 
 .text-ochre {
-  color: #D97706;
+  color: #E69138;
 }
 
 .bg-ochre {
-  background-color: #D97706;
+  background-color: #E69138;
 }
 
 /* Pattern Overlay */
 .pattern-dots {
-  background-image: radial-gradient(rgba(15, 76, 92, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(0, 132, 199, 0.12) 1px, transparent 1px);
   background-size: 16px 16px;
 }
 
 .glass-nav {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -83,5 +92,5 @@
 
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px -10px rgba(15, 76, 92, 0.15);
+  box-shadow: 0 12px 24px -10px rgba(0, 132, 199, 0.18);
 }
